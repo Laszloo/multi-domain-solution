@@ -1,0 +1,77 @@
+{
+    "name": "slim/slim-skeleton",
+    "description": "A Slim Framework skeleton application for rapid development",
+    "keywords": [
+        "microframework",
+        "rest",
+        "router",
+        "psr7"
+    ],
+    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Lockhart",
+            "email": "info@joshlockhart.com",
+            "homepage": "http://www.joshlockhart.com/"
+        },
+        {
+            "name": "Pierre Berube",
+            "email": "pierre@lgse.com",
+            "homepage": "http://www.lgse.com/"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "doctrine/annotations": "^2.0",
+        "doctrine/dbal": "^4.0",
+        "doctrine/orm": "^3.0",
+        "monolog/monolog": "^2.8",
+        "php-di/php-di": "^6.4",
+        "slim/psr7": "^1.5",
+        "slim/slim": "^4.10",
+        "slim/twig-view": "^3.4",
+        "symfony/cache": "^6.4",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "jangregor/phpstan-prophecy": "^1.0.0",
+        "phpmd/phpmd": "@stable",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpstan/extension-installer": "^1.2.0",
+        "phpstan/phpstan": "^1.11",
+        "phpunit/phpunit": "^9.5.26",
+        "squizlabs/php_codesniffer": "^3.10",
+        "symfony/var-dumper": "^6.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        },
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpmd": "phpmd src tests text phpmd.xml",
+        "phpstan": "phpstan",
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit",
+        "check": [
+            "@phpcs",
+            "@phpmd",
+            "@phpstan"
+        ]
+    }
+}

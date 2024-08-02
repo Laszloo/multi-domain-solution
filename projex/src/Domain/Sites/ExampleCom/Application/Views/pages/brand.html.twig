@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Welcome My Site {% endblock %}
+
+{% block main %}
+    <h1>Brand page {{ brandData.dummy }}</h1>
+    <h4>{{ brandData.example }}</h4>
+    {% for brand in brandData.data %}
+        {{ brand.name }}
+    {% endfor %}
+{% endblock %}

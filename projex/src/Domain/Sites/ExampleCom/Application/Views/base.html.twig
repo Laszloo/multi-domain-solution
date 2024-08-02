@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block head %}
+        <link rel="stylesheet" href="style/{{ constant('DOMAIN') }}/output.css">
+        <title>{% block title %}{% endblock %} - Domain name</title>
+    {% endblock %}
+</head>
+<body>
+    {% include '/common/header.html.twig' %}
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    {% include '/common/footer.html.twig' %}
+</body>
+</html>
